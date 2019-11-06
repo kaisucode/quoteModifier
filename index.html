@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Quote Modifier</title>
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+		<link href="https://fonts.googleapis.com/css?family=Dokdo" rel="stylesheet">
+	</head>
+	<body>
+
+		<div class="title">
+			Quote Modifier - Created By Kaisucode
+		</div>
+
+		<div class="textContainer">
+			<textarea id="inputText" rows="10" cols="50" placeholder="Input text here..."></textarea>
+			<textarea id="returnedText" rows="10" cols="50"></textarea>
+		</div>
+		<div class="btnContainer">
+			<button class="btn" id="convert" onclick="convert()">Convert</button>
+		</div>
+
+		<script charset="utf-8">
+			function convert(){
+				var returnedText = document.getElementById("returnedText");
+				returnedText.value = document.getElementById("inputText").value.replace(/\"/g, "'");
+				returnedText.select();
+				document.execCommand("copy");
+			}
+
+			document.querySelector("#inputText").addEventListener("keyup", event => {
+				if(event.key !== "Enter") return;
+				document.querySelector("#convert").click();
+				event.preventDefault();
+			});
+
+		</script>
+	</body>
+</html>
+

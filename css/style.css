@@ -1,0 +1,48 @@
+
+* {
+	background-color: #26292D;
+	color: #00FFF2;
+	font-color: #00FFF2;
+}
+
+.title {
+	font-size: 60px;
+	font-family: 'Dokdo', cursive;
+	text-align: center;
+	color: black;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: #00FFF2;
+}
+
+textarea {
+	font-color: #00FFF2;
+	font-size: 20px;
+	border: 3px solid #00FFF2;
+	border-radius: 5px;
+	width: 47%;
+	margin: 1%;
+}
+
+.textContainer{
+	width: 100%;
+	text-align: center;
+}
+
+.btnContainer{
+	width: 100%;
+	text-align: center;
+}
+
+.btn {
+	font-size: 30px;
+	border: 3px solid pink;
+	border-radius: 10px;
+	width: 200px;
+	height: 60px;
+	outline: none;
+}
+
+.btn:active {
+	transform: translateY(6px);
+}
+
